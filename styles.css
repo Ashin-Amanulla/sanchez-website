@@ -89,6 +89,10 @@ main {
   padding: 4rem 0;
   position: relative;
   overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-graphics {
@@ -101,10 +105,18 @@ main {
   z-index: 0;
 }
 
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .floating-element {
   position: absolute;
   opacity: 0.1;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .floating-element:hover {
@@ -117,6 +129,7 @@ main {
   right: 15%;
   width: 100px;
   height: 100px;
+  transform-origin: center;
   animation: float-rotate-right 6s ease-in-out infinite;
 }
 
@@ -125,6 +138,7 @@ main {
   left: 15%;
   width: 90px;
   height: 90px;
+  transform-origin: center;
   animation: float-rotate-left 7s ease-in-out infinite;
 }
 
@@ -133,6 +147,7 @@ main {
   right: 20%;
   width: 110px;
   height: 110px;
+  transform-origin: center;
   animation: float-spin 10s linear infinite;
 }
 
@@ -290,7 +305,8 @@ footer {
   }
 
   .hero {
-    padding: 2rem 0;
+    padding: 3rem 0;
+    min-height: 400px;
   }
 
   h1 {
@@ -306,30 +322,36 @@ footer {
     opacity: 0.08;
   }
 
-  .floating-element:hover {
-    opacity: 0.2;
-  }
-
   .book {
     right: 5%;
+    width: 80px;
+    height: 80px;
   }
 
   .scroll {
     left: 5%;
+    width: 70px;
+    height: 70px;
   }
 
   .atom {
     right: 10%;
+    width: 90px;
+    height: 90px;
   }
 }
 
 .about-section {
   padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .about-content {
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .profile {
@@ -671,6 +693,23 @@ footer {
   text-align: center;
   padding: 4rem 2rem;
   background-color: var(--background-color);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cta h2 {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  left: 0;
+  transform: none;
+  display: block;
+}
+
+.cta p {
+  text-align: center;
+  max-width: 800px;
+  margin: 1rem auto;
 }
 
 .cta-buttons {
@@ -678,27 +717,54 @@ footer {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .newsletter {
   padding: 4rem 2rem;
   text-align: center;
   background-color: var(--card-background);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newsletter h2 {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  left: 0;
+  transform: none;
+  display: block;
+}
+
+.newsletter p {
+  text-align: center;
+  max-width: 800px;
+  margin: 1rem auto;
 }
 
 .newsletter-form {
-  max-width: 500px;
+  max-width: 800px;
   margin: 2rem auto 0;
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .newsletter-form input {
   flex: 1;
-  padding: 0.8rem;
+  max-width: 500px;
+  padding: 0.8rem 1.2rem;
   border: 1px solid var(--border-color);
   border-radius: 4px;
   font-family: var(--font-sans);
+  font-size: 1rem;
+}
+
+.newsletter-form .btn {
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
@@ -707,11 +773,27 @@ footer {
   .newsletter-form {
     flex-direction: column;
     align-items: stretch;
+    padding: 0 1rem;
+  }
+  
+  .cta,
+  .newsletter {
+    padding: 3rem 1rem;
+  }
+  
+  .cta p,
+  .newsletter p {
+    padding: 0 1rem;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
     padding: 1rem;
+  }
+
+  .newsletter-form input {
+    max-width: 100%;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -1204,4 +1286,141 @@ footer {
   width: 40px;
   height: 60px;
   margin: 30px auto;
+}
+
+/* Centered headings for all pages */
+main section h1,
+main section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+main section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main section h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: var(--primary-color);
+  opacity: 0.2;
+}
+
+main section h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2.5rem;
+}
+
+main section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: var(--primary-color);
+  opacity: 0.15;
+}
+
+/* Section-specific heading styles */
+.service-card h3,
+.portfolio-card h3,
+.faq-item h3,
+.workflow-step h3,
+.contact-info h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* Keep content text aligned left */
+section p {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+/* Exceptions for specific sections */
+.hero h1,
+.cta h2,
+.newsletter h2 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Override underline for CTA and Newsletter titles */
+.cta h2::after,
+.newsletter h2::after {
+  display: none;
+}
+
+.newsletter {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--card-background);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newsletter-form {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-form input {
+  flex: 1;
+  max-width: 500px;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+
+.newsletter-form .btn {
+  white-space: nowrap;
+}
+
+.cta {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--background-color);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cta p,
+.newsletter p {
+  max-width: 800px;
+  margin: 1rem auto;
+}
+
+@media (max-width: 768px) {
+  main section h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  main section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
 }
