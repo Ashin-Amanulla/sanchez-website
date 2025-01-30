@@ -1146,3 +1146,62 @@ footer {
     right: 15%;
   }
 }
+
+/* Update section divider styles */
+.section-divider {
+  position: relative;
+  height: 30px;
+  margin: 1.5rem 0;
+  opacity: 0.15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.section-divider:hover {
+  opacity: 0.25;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  height: 1px;
+  background-color: var(--primary-color);
+  flex: 1;
+  max-width: 200px;
+  transition: all 0.3s ease-in-out;
+}
+
+.section-divider .book-icon {
+  margin: 0 20px;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.section-divider:hover .book-icon {
+  transform: scale(1.1);
+}
+
+.divider-pages::before,
+.divider-pages::after {
+  content: "";
+  height: 15px;
+  width: 20px;
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color) 1px,
+    transparent 1px
+  );
+  background-size: 100% 4px;
+}
+
+.divider-bookmark {
+  transform: rotate(90deg);
+  width: 40px;
+  height: 60px;
+  margin: 30px auto;
+}
