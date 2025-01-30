@@ -81,12 +81,12 @@ nav {
 main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 
 .hero {
   text-align: center;
-  padding: 4rem 0;
+  padding: 6rem 0 5rem;
   position: relative;
   overflow: hidden;
   min-height: 500px;
@@ -305,7 +305,7 @@ footer {
   }
 
   .hero {
-    padding: 3rem 0;
+    padding: 4rem 0 3rem;
     min-height: 400px;
   }
 
@@ -342,7 +342,7 @@ footer {
 }
 
 .about-section {
-  padding: 2rem 0;
+  padding: 4rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -386,7 +386,7 @@ footer {
 }
 
 .biography h3 {
-  margin: 2rem 0 1rem 0;
+  margin: 3rem 0 1.5rem;
   color: var(--primary-color);
 }
 
@@ -411,7 +411,7 @@ footer {
 /* Add these blog-specific styles to your existing styles.css file */
 
 .blog-section {
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
 .blog-content {
@@ -420,7 +420,7 @@ footer {
 }
 
 .blog-post {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   padding: 2rem;
   background-color: var(--card-background);
   border: 1px solid var(--border-color);
@@ -461,7 +461,7 @@ footer {
 /* Add these contact-specific styles to your existing styles.css file */
 
 .contact-section {
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
 .contact-content {
@@ -470,7 +470,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 4rem;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .contact-info {
@@ -614,7 +614,7 @@ footer {
 }
 
 .services {
-  padding: 4rem 0;
+  padding: 5rem 0;
   background-color: var(--background-color);
 }
 
@@ -624,7 +624,7 @@ footer {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .service-card {
@@ -657,7 +657,7 @@ footer {
 }
 
 .testimonials {
-  padding: 4rem 0;
+  padding: 5rem 0 4rem;
 }
 
 .testimonial-card {
@@ -691,10 +691,10 @@ footer {
 
 .cta {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   background-color: var(--background-color);
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 3rem auto;
 }
 
 .cta h2 {
@@ -721,11 +721,11 @@ footer {
 }
 
 .newsletter {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
   background-color: var(--card-background);
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 3rem auto;
 }
 
 .newsletter h2 {
@@ -775,12 +775,13 @@ footer {
     align-items: stretch;
     padding: 0 1rem;
   }
-  
+
   .cta,
   .newsletter {
-    padding: 3rem 1rem;
+    padding: 4rem 1.5rem;
+    margin: 2rem auto;
   }
-  
+
   .cta p,
   .newsletter p {
     padding: 0 1rem;
@@ -896,7 +897,7 @@ footer {
 
 /* Portfolio Section */
 .portfolio {
-  padding: 4rem 0;
+  padding: 5rem 0;
   background-color: var(--background-color);
 }
 
@@ -906,7 +907,7 @@ footer {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .portfolio-card {
@@ -969,7 +970,7 @@ footer {
 
 /* FAQ Section */
 .faq {
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 .faq-grid {
@@ -978,7 +979,7 @@ footer {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .faq-item {
@@ -1027,7 +1028,7 @@ footer {
 
 /* Workflow Section */
 .workflow {
-  padding: 4rem 0;
+  padding: 5rem 0;
   background-color: var(--background-color);
 }
 
@@ -1037,7 +1038,7 @@ footer {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .workflow-step {
@@ -1368,11 +1369,11 @@ section p {
 }
 
 .newsletter {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
   background-color: var(--card-background);
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 3rem auto;
 }
 
 .newsletter-form {
@@ -1401,10 +1402,10 @@ section p {
 
 .cta {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   background-color: var(--background-color);
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 3rem auto;
 }
 
 .cta p,
